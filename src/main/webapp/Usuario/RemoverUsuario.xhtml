@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ 	xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+	
+		<style>
+			.div1{
+				position: relative;
+				top: 50px;
+				
+			}
+		
+			.botao{
+				
+				position: relative;
+				left: 150px; 
+			}
+		</style>
+	</h:head>
+	
+	
+
+<h:body>
+
+	<div>
+	<h:form>
+		
+			<p:menubar>
+			<p:menuitem id="Pagina" action="/pagina_inicial" value="Pagina Inicial" />
+      				<p:submenu label= "Usuario" icon="pi pi-briefcase">
+      					<p:menuitem value="Listar" url="http://localhost:8080/pi20192/faces/Usuario/listar_usuario.xhtml" />
+      					<p:menuitem value="Remover" url="http://localhost:8080/pi20192/faces/Usuario/RemoverUsuario.xhtml" />
+      					<p:menuitem value="Atualizar" url="http://localhost:8080/pi20192/faces/Usuario/atualizar_usuario.xhtml" />      				
+      				</p:submenu>
+      				<p:menuitem id="Deslogar" action="#{loginUsuarioBean.Deslogar()}" value="Deslogar" />	    			
+      		</p:menubar>
+		
+	</h:form>
+	</div>
+
+	
+	<div class="div1">
+	<h:form>
+	
+	<center>
+		
+			<p:panel header="Remover Usuario">
+			<p:panelGrid columns="1">	
+				
+				<p:growl id="message" showDetail="true" />
+				
+				<p:outputLabel for="id" value="Id:" />
+				<p:inputText id="id" value="#{usuarioBean.usuario.id}" size="50" required="true"/>
+				
+				<p:commandButton class="botao" action="#{usuarioBean.remover()}" value="Remover Usuario" ajax="false" icon="pi pi-save" validateClient="true" />
+			  		
+			</p:panelGrid>	
+			</p:panel>
+		
+		
+	</center>
+	</h:form>
+	</div>
+	
+</h:body>
+
+</html>

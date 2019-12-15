@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+      
+      <h:head>
+      	<title>Pagina inicial</title>
+      </h:head>
+      
+      <h:body>
+      
+      	<h:form>
+      		<p:growl id="messages" />
+      		
+      		<p:menubar>
+			
+			<p:menuitem id="Pagina" action="/pagina_inicial" value="Pagina Inicial" />
+			
+      			
+      				<p:submenu label= "Usuario" icon="pi pi-briefcase">
+      					<p:menuitem value="Listar" url="http://localhost:8080/pi20192/faces/Usuario/listar_usuario.xhtml" />
+      					<p:menuitem value="Remover" url="http://localhost:8080/pi20192/faces/Usuario/RemoverUsuario.xhtml" />
+      					<p:menuitem value="Atualizar" url="http://localhost:8080/pi20192/faces/Usuario/atualizar_usuario.xhtml" />      				
+      				</p:submenu>
+      				<p:menuitem id="Deslogar" action="#{loginUsuarioBean.Deslogar()}" value="Deslogar" />	    			
+      			
+      		</p:menubar>
+      		
+      	</h:form>
+      	
+      	
+      	<h:form>
+      	
+      	<p:panelGrid>
+      	
+      		<a></a>
+      	
+      	</p:panelGrid>
+      		
+      	
+      	</h:form>
+      		
+      
+      	
+
+      
+      	
+      
+      </h:body>
+      
+      
+</html>

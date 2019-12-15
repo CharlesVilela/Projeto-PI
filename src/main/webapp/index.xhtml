@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets" 
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+<ui:composition template="Template.xhtml">
+	<ui:define name="content">
+		<link type="text/css" rel="stylesheet" href="resources/css/Inicio.css" />
+		<h:outputStylesheet library="css" name="Inicio.css"></h:outputStylesheet>
+		<div id="delivery">
+			<div class="center">
+				<div class="col1">
+					<div class="bloco1">
+						<h:graphicImage value="/Imagens/banner3.jpg"
+							style="rmargin: auto; display: block; border-radius: 10px;" />
+					</div>
+				</div>
+				<div class="col2">
+					<div class="bloco2">
+						<h3>Bem vindo a nossa plataforma</h3>
+						<h1>IoT</h1>
+						<p>
+							Venha fazer parte do amanhã! <br /> Começando Hoje!
+						</p>
+						<a href="Usuario/cadastrarUsuario.xhtml">
+							<button Class="botao">Cadastre-se</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="cardapio">
+			<div class="header">
+				<div class="center">
+					<div class="bg"></div>
+					<div class="interno">
+						<p class="titulo">
+							<span style="color: #d6d6d6">Conheça mais sobre o IoT</span>
+						</p>
+						<p class="subtitulo">
+												</p>
+
+						<div class="botaocardapio">
+							<div class="col-md-3 col-sm-3 col-xs-6">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	<!--  Link video-->
+					
+	</ui:define>
+	<div id="rodape">
+		<ui:insert name="rodape">
+			<h:form>
+				<footer class="footer">
+
+					<h:graphicImage value="Imagens/logo1.png" alt="logo" class="logo2" />
+					<ul class="menuRodape">
+						<li><a href="Inicio.xhtml">INICIO</a></li>
+						<li><a href="Sobre.xhtml">SOBRE</a></li>
+						
+					</ul>
+					<p>© COPYRIGHT 2019 WEB Projeto PI - Plataforma Internet Of Thinks (IOT) - TODOS OS DIREITOS
+						RESERVADOS.</p>
+				</footer>
+			</h:form>
+		</ui:insert>
+	</div>
+</ui:composition>
+
+</html>

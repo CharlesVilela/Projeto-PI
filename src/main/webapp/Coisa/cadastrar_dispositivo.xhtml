@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+	
+	<style>
+	
+		.div1{
+			
+			width: 400px;
+			height: 400px;
+			
+			position: relative;
+			top: 150px;
+			left: 450px;
+			
+			text-align: center;
+		}
+		
+		.botao{
+			
+			text-align: center;
+			position: relative;
+			left: 150px;
+			top: 20px;
+		
+		}
+	
+	</style>
+	
+	</h:head>
+
+
+
+<h:body>
+
+	
+	<div class="div1">
+	<h:form>		
+		
+			<h2>Cadastro de Dispositivo</h2>
+			<h:panelGrid columns="2">
+			
+				<p:outputLabel for="nome" value="Nome: " />
+				<p:inputText id="nome" value="#{coisaBean.coisa.nome}" />
+				
+				<p:outputLabel for="fabricante" value="Fabricante " />
+				<p:inputText id="fabricante" value="#{coisaBean.coisa.fabricante}" />
+				
+				<p:outputLabel for="icone" value="Icone " />
+				<p:inputText id="icone" value="#{coisaBean.coisa.icone}" />
+				
+				<p:outputLabel for="dashboard" value="Dashboard " size="50"/>
+				<p:inputText id="dashboard" value="#{coisaBean.coisa.dashboard}" />
+					<!--<f:convertNumber maxFractionDigits="1"/>-->
+				<!--</p:inputText>-->
+				
+				
+				
+				<p:commandButton class="botao" actionListener="#{coisaBean.salvar()}" action="/pagina_inicial" value="Salvar"/>
+			
+				
+			</h:panelGrid>	
+		
+	</h:form>
+	</div>
+
+</h:body>
+	
+	
+	
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+      
+      <h:head>
+      	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      	
+      	<h:outputStylesheet name="./css/login.css" />
+      	<h:outputStylesheet name=".css/Tamplate.css" />
+      	
+      	<title>Login</title>
+      	
+      	<style>
+      	
+      		.div1{
+      			
+      			
+      			width: 100px;
+      			height: 25px;
+      			
+      			text-align: center;
+      			
+      			position: relative;
+      			left: 1170px;
+      			
+      		
+      		}
+      		
+      		.div2{
+      		
+      			border: ;
+      			width: 400px;
+      			height: 400px;
+      			
+      			background: #9AFF9A;
+      			border-radius: 10%;
+      			
+      			position: relative;
+      			
+      			top: 100px;
+      			left: 450px;
+      		}
+      		
+ 
+      		
+      		.botao{
+      		
+      			position: relative;
+      			top: 10px;
+      			width: 100px;
+ 				border-radius: 5%;
+      		
+      		}
+      		
+      		
+      	
+      	</style>
+      	
+      	
+      	
+      </h:head>
+      
+      <h:body>
+     
+      
+      
+    
+      <div class="div2">
+      	<h:form>
+      		
+      		<center>
+      			<h1>Login</h1>
+      			<h:panelGrid columns="1">
+      			
+      			<p:growl id="message" showDetail="true" />
+      			
+      				<p:outputLabel for="email" value="E-mail " />
+      				<p:inputText id="email" value="#{loginUsuarioBean.email}" required="true" />
+      				
+      				<p:outputLabel for="senha" value="Senha " />
+      				<p:password id="senha" value="#{loginUsuarioBean.senha}" required="true" >
+      					<f:validateLength minimun="8" maximum="16" />
+      					<p:clientValidator />
+      				
+      				</p:password>
+      			
+      			</h:panelGrid>
+      			
+      			<p:commandButton class="botao" id="login" action="#{loginUsuarioBean.loginUsuario()}" value="Entrar" ajax="false" icon="pi pi-check" validateClient="true" />
+      				
+      		</center>
+      	
+      	</h:form>
+      </div>
+      
+      </h:body>
+      
+</html>

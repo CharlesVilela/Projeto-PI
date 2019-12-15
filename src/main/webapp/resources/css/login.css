@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+.bloco{
+	margin-top: 50px;
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+	width: 500px;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 30px;
+	animation: yourAnimation 0.6s forwards 0s linear;
+	
+}
+#login{
+	display: table;
+	width: 100%;
+}
+
+#login .center {
+	position: relative;
+	height: 500px;
+	overflow: hidden;
+	text-align: center;
+	padding-top: 230px;
+}
+#login h1{
+	padding-top: 30px;
+	font-family: 'Josefin Sans', sans-serif;
+	color: white;
+}
+
+#login .bg {
+	background-image: url(/RestauranteProjeto/Imagens/fundoSalada.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #f4f8f9;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-attachment: fixed;
+	opacity: 0.7;
+	filter: blur(2px); 
+}
+#login .login{
+	padding-top: 30px;
+} 
+#header {
+	position: absolute;
+}
+
+#content {
+	padding-top: 0;
+}
+#container {
+	display: table;
+	width: 100%;
+}
+
+#container .bg {
+	background-image: url(/RestauranteProjeto/Imagens/fundoSalada.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	background-color: #f4f8f9;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-attachment: fixed;
+	opacity: 0.7;
+	filter: blur(2px); 
+}
+
+.header{
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(50% - 255px);
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+	font-weight: 200;
+}
+
+.header div span{
+	color: #5379fa !important;
+}
+
+.login .user{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.login .pass{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.login .button{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.login .button:hover{
+	opacity: 0.8;
+}
+
+.login .button:active{
+	opacity: 0.6;
+}
+
+.login .user:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login .pass:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login .button:focus{
+	outline: none;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+@keyframes yourAnimation{
+    0%{
+        transform: rotate(0) translateX(2%);
+        opacity: 0;
+        }
+    100%{
+        transform: rotate(0) translateX(0);
+        opacity: 1;
+        }
+}
+

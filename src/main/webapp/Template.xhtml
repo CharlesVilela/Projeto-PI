@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<title><ui:insert name="title">Plataforma IoT</ui:insert></title>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<h:outputStylesheet library="css" name="Template.css"></h:outputStylesheet>
+	<link type="text/css" rel="stylesheet"
+		href="resources/css/Template.css" />
+</h:head>
+
+<h:body>
+
+	<p:growl id="msgGlobal" />
+
+	<div id="header">
+		<ui:insert name="header">
+			<h:form>
+				<input type="checkbox" id="bt_menu" />
+				<label for="bt_menu">&#9776;</label>
+				<a href="Inicio.xhtml" class="imagemlogo"> <h:graphicImage
+						value="Imagens/logo1.png" alt="logo" class="logo" />
+				</a>
+
+				<nav class="menu">
+					<ul>
+						<li><a href="Inicio.xhtml">Inicio</a></li>	
+						<li><a href="Sobre.xhtml">Sobre</a></li>
+						<ui:fragment rendered="#{loginControl.usuario != false}">
+							<li id="menudireito"><a href="login.xhtml">Login</a></li>
+						</ui:fragment>
+
+						<ui:fragment rendered="#{loginControl.usuario == false}">
+							<li id="menudireito"><a><h:outputText
+										value="#{loginControl.usuario}" /></a>
+								<ul>
+									<li><h:commandLink value="Sair"
+											action="#{loginControl.deslogar}" /></li>
+								</ul></li>
+						</ui:fragment>
+					</ul>
+				</nav>
+
+			</h:form>
+		</ui:insert>
+	</div>
+
+	<div id="content">
+		<ui:insert name="content">
+			<div></div>
+		</ui:insert>
+	</div>
+
+
+	<ui:insert name="rodape">
+		<div id="rodape">
+			<h:form>
+				<footer class="footer">
+
+					<h:graphicImage value="Imagens/logo1.png" alt="logo" class="logo2" />
+					<ul class="menuRodape">
+						<li><a href="Inicio.xhtml">INICIO</a></li>
+						<li><a href="Sobre.xhtml">SOBRE</a></li>
+					</ul>
+					<p>© COPYRIGHT 2019 Plataforma Iot - TODOS OS DIREITOS
+						RESERVADOS.</p>
+				</footer>
+			</h:form>
+		</div>
+	</ui:insert>
+
+
+</h:body>
+</html>

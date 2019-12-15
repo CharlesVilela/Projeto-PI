@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+	
+	<style>
+		.botao{
+			
+			text-align: center;
+			
+			position: relative;
+			
+			top: 20px;
+			left: 200px;
+		
+		}
+		.div1{
+			
+			position: relative;
+			
+			text-align: center;
+			
+			height: 20px;
+			width: 100px;
+			
+		}
+		
+		.div2{
+			
+			position: relative;
+			
+			top: 50px;
+			
+			height: 400px;
+			width: 600px;
+		}
+	</style>
+	
+	</h:head>
+	
+	<h:body>
+	
+	<h:form>
+	<div >
+		<p:menubar>
+			<p:menuitem id="Pagina" action="/pagina_inicial" value="Pagina Inicial" />
+      				<p:submenu label= "Usuario" icon="pi pi-briefcase">
+      					<p:menuitem value="Listar" url="http://localhost:8080/pi20192/faces/Usuario/listar_usuario.xhtml" />
+      					<p:menuitem value="Remover" url="http://localhost:8080/pi20192/faces/Usuario/RemoverUsuario.xhtml" />
+      					<p:menuitem value="Atualizar" url="http://localhost:8080/pi20192/faces/Usuario/atualizar_usuario.xhtml" />      				
+      				</p:submenu>
+      				<p:menuitem id="Deslogar" action="#{loginUsuarioBean.Deslogar()}" value="Deslogar" />	    			
+      		</p:menubar>
+	
+	</div>
+	</h:form>
+		<center>
+		<div class="div2">
+			<h:form>		
+					<h:panelGrid columns="1">
+					
+					<p:growl id="message" showDetail="true" />
+					
+						<p:outputLabel for="id" value="Id: " />
+						<p:inputText id="id" value="#{usuarioBean.id}" size="50" required="true" />
+						
+						<p:outputLabel for="nome" value="Nome: " />
+						<p:inputText id="nome" value="#{usuarioBean.usuario.nomeUsuario}" size="50" required="true" />
+						
+						<p:outputLabel for="cpf" value="Cpf: " />
+						<p:inputText id="cpf" value="#{usuarioBean.usuario.cpf}" size="50" required="true"/>
+						
+						<p:outputLabel for="email" value="Email " />
+						<p:inputText id="email" value="#{usuarioBean.usuario.email}" size="50" required="true"/>
+						
+						<p:outputLabel for="senha" value="Senha: " />
+						<p:password id="senha" value="#{usuarioBean.usuario.senha}" size="50" required="true"/>
+						
+						<p:commandButton class="botao" action="#{usuarioBean.atualizarUsuario()}" value="Atualizar" ajax="false" icon="pi pi-save" validateClient="true"/>
+					
+					</h:panelGrid>	
+			</h:form>
+		</div>
+		</center>
+	</h:body>
+</html>
